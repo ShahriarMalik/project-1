@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#mcs {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#mcs td,
+#mcs th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#mcs tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#mcs tr:hover {
+  background-color: #ddd;
+}
+
+#mcs th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}

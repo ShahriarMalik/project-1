@@ -1,0 +1,17 @@
+<mcs_shipment_system>
+<timestamp>1634313376.0573</timestamp>
+<timestamp_format>15.10.2021 17:56:16</timestamp_format>
+<http_code>200</http_code>
+<code>1</code>
+<msg>Tracking-Statistik vorhanden</msg>
+<client_ip>89.27.237.50</client_ip>
+<anzahl>7898</anzahl>
+<ereignis_code_0>0</ereignis_code_0>
+<ereignis_code_10>2839</ereignis_code_10>
+<ereignis_code_20>0</ereignis_code_20>
+<ereignis_code_30>1378</ereignis_code_30>
+<ereignis_code_40>150</ereignis_code_40>
+<ereignis_code_50>3531</ereignis_code_50>
+<ereignis_code_500>0</ereignis_code_500>
+<ereignis_code_600>0</ereignis_code_600>
+</mcs_shipment_system>

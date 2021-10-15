@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Project 1</title>
+  </head>
+  <body>
+    <div id="content">
+      <table id="mcs" cellpadding="10px" style="text-align: left">
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Timestamp Format</th>
+            <th>http_code</th>
+            <th>code</th>
+            <th>msg</th>
+            <th>client_ip</th>
+            <th>anzal</th>
+            <th>ereignis_code</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script>
+      let tableMCS = document.getElementById("mcs");
+
+      fetch("./michsoft.xml")
+        .then((response) => {
+          return response.text();
+        })
+        .then((data) => {
+          console.log(data);
+          let parser = new DOMParser(),
+            xmlDoc = parser.parseFromString(data, "text/xml");
+
+          console.log(xmlDoc.getElementsByTagName("timestamp")[0].innerHTML);
+          let row = document.createElement("tr");
+
+          //   Timestmp
+          let td = document.createElement("td");
+          td.innerText = xmlDoc.getElementsByTagName("timestamp")[0].innerHTML;
+          row.appendChild(td);
+          //   Timestamp Format
+          td = document.createElement("td");
+          td.innerText =
+            xmlDoc.getElementsByTagName("timestamp_format")[0].innerHTML;
+          row.appendChild(td);
+          //   http_code
+          td = document.createElement("td");
+          td.innerText = xmlDoc.getElementsByTagName("http_code")[0].innerHTML;
+          row.appendChild(td);
+          //   code
+          td = document.createElement("td");
+          td.innerText = xmlDoc.getElementsByTagName("code")[0].innerHTML;
+          row.appendChild(td);
+          //   msg
+          td = document.createElement("td");
+          td.innerText = xmlDoc.getElementsByTagName("msg")[0].innerHTML;
+          row.appendChild(td);
+          //   client_ip
+          td = document.createElement("td");
+          td.innerText = xmlDoc.getElementsByTagName("client_ip")[0].innerHTML;
+          row.appendChild(td);
+          //   anzahl
+          td = document.createElement("td");
+          td.innerText = xmlDoc.getElementsByTagName("anzahl")[0].innerHTML;
+          row.appendChild(td);
+          //   ereignis_code_0
+          td = document.createElement("td");
+          td.innerText =
+            xmlDoc.getElementsByTagName("ereignis_code_0")[0].innerHTML;
+          row.appendChild(td);
+
+          tableMCS.children[1].appendChild(row);
+        });
+    </script>
+  </body>
+</html>
