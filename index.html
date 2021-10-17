@@ -26,8 +26,9 @@
     </div>
     <script>
       let tableMCS = document.getElementById("mcs");
-
-      fetch("./michsoft.xml")
+  
+      //fetch("./michsoft.xml")
+      fetch("https://media-sc.com:65312/10/trackingdaten/statistik.xml?api_user=admin&api_key=AA55MK192020IDKCJAHDQZYMAK1JFH9&id_mandant[0]=94")
         .then((response) => {
           return response.text();
         })
